@@ -170,3 +170,4 @@ SELECT *
 FROM emp
 WHERE deptno in (SELECT deptno FROM emp WHERE ename = 'SMITH' OR ename ='WARD');
 
+
