@@ -205,10 +205,10 @@ SELECT * FROM PRODUCT;
 
 SELECT *
 FROM PRODUCT 
-WHERE PID IN (200,300) 
-  AND EXISTS (SELECT 1
+WHERE EXISTS (SELECT 1
               FROM CYCLE 
-              WHERE PRODUCT.PID = CYCLE.PID);
+              WHERE PRODUCT.PID = CYCLE.PID
+                AND PID IN (200,300));
 
 
 --부서에 소속된 직원이 있는 부서 정보 조회
